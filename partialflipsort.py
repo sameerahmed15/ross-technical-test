@@ -30,11 +30,6 @@ def sorting(number_list):
                 number_list = partial_flip(number_list, last)
                 k_list.append(last)
                 last = last - 1
- 
-    for i in k_list:
-        print(i)
 
     return k_list
     
-
-sorting([3,2,4,1])
