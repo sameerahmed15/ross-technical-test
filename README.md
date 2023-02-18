@@ -4,7 +4,7 @@ This code includes two functions that can be used to sort a list of integers fro
 ## Strategy
 Flip from the maximum number index. Bring max num to index 0.\
 Then flip from last element so that the max is at the end of list.
-Decrement max and last everytime they are used as index for flipping.\
+Decrement `max` and `last` variable everytime they are used as index for flipping.\
 Let's test this on the list [3,2,4,1].
 * Flip the sub-array from index 2: [4, 2, 3, 1]
 * Flip the sub-array from index 3: [1, 3, 2, 4]
