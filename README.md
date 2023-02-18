@@ -19,6 +19,16 @@ This function takes an array of integers and an index value from where the array
 ## sorting function
 This function takes an array of integers and sorts it from smallest to highest using partial flips. It first finds the maximum value in the array and shifts it to the beginning of the array. It then shifts the maximum value to the end of the unsorted portion of the array. It repeats this process until the array is sorted.
 
+## How to run locally
+### Requirements
+* Python 3.7 (tested on this version but should probably work on 3.x)
+* unittest
+### Run tests
+Run the following command from the root directory
+```
+python3 -m unittest tests/test_solution.py
+```
+
 ## Usage
 To use the sorting function, pass a list of integers as an argument. The function will return a list of indices representing the partial flips needed to sort the list.
 
