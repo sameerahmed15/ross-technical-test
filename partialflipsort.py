@@ -1,35 +1,27 @@
-def partial_flip(number_list, k):
-    # TODO: try to optimize this function
+def partial_flip(arr, k):
 
-    sub_array = [0 for i in range(k)]
-    for i in range(k):
-        sub_array[i] = number_list[i]
-
-    flipped_array = sub_array[::-1]
-
-    for i in range(k):
-        number_list[i] = flipped_array[i]
+    arr[0:k] = arr[k-1::-1]
     
-    return number_list
+    return arr
 
 
-def sorting(number_list):
+def sorting(arr):
     # TODO: try to optimize this function
 
-    max_num = max(number_list)
-    last = len(number_list)
-    k_list = []
-    for i in range(len(number_list)):
-        for j in range(len(number_list)):
+    len_arr = len(arr)
+    max_num = max(arr)
+    last = len_arr
+    ks = []
+    for i in range(len_arr):
+        for j in range(len_arr):
             if max_num == 1:
                 break
-            elif number_list[j] == max_num:
-                number_list =  partial_flip(number_list, j+1)
-                k_list.append(j+1)
-                max_num = max_num - 1
-                number_list = partial_flip(number_list, last)
-                k_list.append(last)
-                last = last - 1
+            elif arr[j] == max_num:
+                arr =  partial_flip(arr, j+1)
+                ks.append(j+1)
+                max_num -= 1
+                arr = partial_flip(arr, last)
+                ks.append(last)
+                last -= 1
 
-    return k_list
-    
+    return ks
