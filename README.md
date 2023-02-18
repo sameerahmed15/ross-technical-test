@@ -2,15 +2,16 @@
 This code includes two functions that can be used to sort a list of integers from smallest to highest using partial flips.
 
 ## Strategy
-Flip from the maximum number index. Bring max num to index 0\
-then flip from last element so that the max is at the end of list\
-Decrement max and last everytime they are used as index for flipping\
-[3,2,4,1] max = 4 ; last = 4\
-[4,2,3,1] max = 3 ; last = 4\
-[1,3,2,4] max = 3 ; last = 3\
-[3,1,2,4] max = 2 ; last = 3\
-[2,1,3,4] max = 2 ; last = 2\
-[1,2,3,4] max = 1
+Flip from the maximum number index. Bring max num to index 0.\
+Then flip from last element so that the max is at the end of list.
+Decrement max and last everytime they are used as index for flipping.\
+Let's test this on the list [3,2,4,1].
+* Flip the sub-array from index 2: [4, 2, 3, 1]
+* Flip the sub-array from index 3: [1, 3, 2, 4]
+* Flip the sub-array from index 1: [3, 1, 2, 4]
+* Flip the sub-array from index 2: [2, 1, 3, 4]
+* Flip the sub-array from index 1: [1, 2, 3, 4]
+
 
 ## partial_flip function
 This function takes an array of integers and an index value from where the array will be reversed. It then reverses the sub-array starting from the given index and returns the modified array.
