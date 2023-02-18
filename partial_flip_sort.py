@@ -43,5 +43,3 @@ def sorting(arr):
                 break
 
     return ks
-
-sorting([3,2,4,1])
