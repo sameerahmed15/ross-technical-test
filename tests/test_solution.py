@@ -1,5 +1,6 @@
 import unittest
-
+import sys
+sys.path.insert(1, './src')
 import src.partial_flip_sort as partial_flip_sort
 
 class TestFlipSort(unittest.TestCase):
