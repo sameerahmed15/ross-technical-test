@@ -41,5 +41,7 @@ def sorting(arr):
                 ks.append(last)
                 last -= 1
                 break
+    print("Sorted array: ", *arr)
+    print("List of k values: ", *ks)
 
     return ks
